@@ -1,0 +1,180 @@
+body {
+    max-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #111;
+}
+
+header {
+    color: orange;
+    font: 3rem bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    background-image: radial-gradient(#ddf, #333);
+    background-image: url(../images/texture.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-right: 2px solid orange;
+}
+
+
+/* cube */
+
+.container { 
+    height: 34vh;
+    perspective: 500px;
+    perspective-origin: 50% 50%;
+}
+
+#cube {
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    position: relative;
+    transition: all 1.5s ease-in-out;
+    margin: 100px auto;
+    transform-origin: center;
+}
+
+.side {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    background-color: rgba(20, 20, 40, 0.75);
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;/*
+    font-weight: bold;*/
+    border-radius: 20px;
+    border: 2px solid orange;
+    color: orange;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first {
+    transform: rotateY(0deg) translateZ(100px) translateX(-100px) translateY(-100px);
+}
+
+.second {
+    transform: rotateY(90deg) translateZ(0px) translateY(-100px);
+}
+
+.third {
+    transform: rotateY(180deg) translateZ(100px) translateX(100px) translateY(-100px);
+}
+
+.fourth {
+    transform: rotateY(-90deg) translateZ(200px) translateY(-100px);
+}
+
+.fifth {
+    transform: rotatex(90deg) rotateY(180deg) translateZ(0px) translateX(100px);
+}
+
+.sixth {
+    transform: rotatex(-90deg) rotateY(180deg) translateZ(200px) translateX(100px);
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button {
+    width: 30%;
+    background-color: rgba(20, 20, 20, 0.3);
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;/*
+    font-weight: bold;*/
+    height: 3rem;/*
+    flex: 1 0 auto;
+    max-width: 50%;
+    min-width: 30%;*/
+    margin: 5px;
+}
+
+button:focus, button:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+}
+
+button:active {
+    background-color: rgba(0, 255, 255, 0.9);
+}
+
+/* main */ 
+
+#feed {
+    background-image: linear-gradient(#111, #444, #111);
+    background-attachment: fixed;
+    font: 1.5rem courier, monospace;
+    color: orange;
+    background-color: #444;
+    position: absolute;
+    max-height: fit-content;
+    width: 60vw;
+    display: inline-flex;
+    flex-direction: column;
+    top: 0;
+    transition: top 2.5s 1s cubic-bezier(.5,-0.15,.5,1.15);
+}
+
+section {
+    height: 100vh;
+    line-height: 1.5;
+}
+
+section h2 {
+    position: relative;
+    top: 1.75px;
+    margin: 20vh 6vw 0;
+    border: 2px solid orange;
+    width: fit-content;
+    padding: 0 1rem;
+    border-top-left-radius: 20px 40px;
+    border-top-right-radius: 20px 40px;
+    background-color: #222;
+}
+
+section p, section ul {
+    border: 2px solid orange;
+    border-radius: 20px;
+    margin: 0 1rem;
+    padding: 1rem;
+    background-color: #333;
+
+}
+
+li {
+    list-style: square;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 900px) and (min-width: 401px) {
+    button {
+        width: 50%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    button {
+        width: 100%;
+    }
+}
