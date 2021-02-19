@@ -1,15 +1,27 @@
 let cube = document.getElementById('cube');
 let buttons = document.getElementById('buttons');
-let b1 = document.getElementById('b1');
-let b2 = document.getElementById('b2');
-let b3 = document.getElementById('b3');
-let b4 = document.getElementById('b4');
-let b5 = document.getElementById('b5');
-let b6 = document.getElementById('b6');
 let feed = document.getElementById('feed');
+let s1 = document.getElementById('first');
+let s2 = document.getElementById('second');
+let s3 = document.getElementById('third');
+let s4 = document.getElementById('fourth');
+let s5 = document.getElementById('fifth');
+let s6 = document.getElementById('sixth');
+let wid = window.screen.width;
+let hgt = window.screen.height;
 
 
-function tester (e) {
+function tester (e) {/*
+    if (wid <= 900 || hgt <= 900) {/*
+        s1.style.transform = "tanslateZ(50px) tanslateX(-50px) tanslateY(-50px)";
+        s2.style.transform = "tanslate() tanslate() tanslate()";
+        s3.style.transform = "tanslate() tanslate() tanslate()";
+        s4.style.transform = "tanslate() tanslate() tanslate()";
+        s5.style.transform = "tanslate() tanslate() tanslate()";
+        s6.style.transform = "tanslate() tanslate() tanslate()";
+        s1.style.backgroundColor = "#f00";
+    }*/
+
     let click = e.target.id;
 
     switch (click) {
@@ -42,3 +54,4 @@ function tester (e) {
 
 buttons.addEventListener('click', tester);
 
+document.g
